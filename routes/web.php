@@ -6,4 +6,4 @@ Route::get('/', function () {
     return view('home');
 });
 
-// Route::view('');
+Route::view('/about', 'about');

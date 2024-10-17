@@ -7,19 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HOME</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
-        rel="stylesheet">
-
+    @include('head-links')
 
 
 </head>
 
 <body style="">
-    <header>
+    
         @include('header')
-    </header>
+    
     <main>
         {{-- Hero section --}}
         <section class="d-flex" style="min-height: 80vh; background-image:url(/images/bg.jpeg); background-size:cover">
@@ -234,7 +230,7 @@
 
         {{-- Get in touch section --}}
         <section class="mt-5">
-            <div class="container-fluid py-5 bg-dark text-white" style="background-color: ">
+            <div class="container-fluid py-5 bg-dark text-white">
                 <div class="row">
                     <div class="col" style="min-width: 300px">
                         <img src="https://img.freepik.com/premium-photo/creative-technology-communication-concept_23-2148945731.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
@@ -402,127 +398,13 @@
 
     </main>
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-        <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-                <a href="#" class="me-4 text-reset" style="display: inline-flex">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="#" class="me-4 text-reset" style="display: inline-flex">
-                    <i class="bi bi-instagram"></i>
-                </a>                
-                <a href="#" class="me-4 text-reset" style="display: inline-flex">
-                    <i class="bi bi-github"></i>
-                </a>
-            </div>
-            <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="bi bi-radioactive"></i> The Palmate Institute
-                        </h6>
-                        <p>
-                            Crafting the Coders of Tomorrow!
-                            <i>Master the art of coding, and gain the expertise to excel in a rapidly evolving digital
-                                landscape, with a focus on innovation and creativity.</i>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Products
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Angular</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">React</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Vue</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Laravel</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="#" class="text-reset">Student Portal</a>
-                        </p>
-                        <p>
-                            <a href="#" class="text-reset">Available Courses</a>
-                        </p>
-                        <p>
-                            <a href="#" class="text-reset">Orders</a>
-                        </p>
-                        <p>
-                            <a href="#" class="text-reset">Help</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="bi bi-map"></i>Nairobi, Kenya</p>
-                        <p>
-                            <i class="bi bi-envelope-at"></i>
-                            info@palmate.com
-                        </p>
-                        <p><i class="bi bi-telephone"></i> + 254 111 521 1101 </p>
-                        <p><i class="bi bi-telephone"></i> + 254 111 521 1101 </p>
-
-
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2023 Copyright:
-            <a class="text-reset fw-bold" href="/">The Palmate Institute</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+    @include('footer')
     <!-- Footer -->
 
     {{-- bootstrap js links --}}
+    @include('bootstrap-scripts')
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+         
    
 </body>
 
