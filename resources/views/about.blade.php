@@ -60,7 +60,7 @@
             </div>
 
         </section>
-        {{-- mission section --}}
+        {{-- mission vision section --}}
         <section class="d-flex justify-content-center align-items-center flex-wrap"  style="min-height: 100dvh">
 
             <div class="container-fluid mt-5  px-5">

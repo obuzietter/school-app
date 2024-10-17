@@ -15,7 +15,7 @@
                         <a class="nav-link" href="/about">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ADMISSIONS</a>
+                        <a class="nav-link" href="/admissions">ADMISSIONS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">PROGRAMS</a>
