@@ -8,3 +8,4 @@ Route::get('/', function () {
 
 Route::view('/about', 'about');
 Route::view('/admissions', 'admissions');
+Route::view('/community', 'community');
