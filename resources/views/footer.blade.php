@@ -9,7 +9,7 @@
 
         <!-- Right -->
         <div>
-            <a href="#" class="me-4 text-reset" style="display: inline-flex">
+            {{-- <a href="#" class="me-4 text-reset" style="display: inline-flex">
                 <i class="bi bi-facebook"></i>
             </a>
             <a href="#" class="me-4 text-reset" style="display: inline-flex">
@@ -17,7 +17,7 @@
             </a>                
             <a href="#" class="me-4 text-reset" style="display: inline-flex">
                 <i class="bi bi-github"></i>
-            </a>
+            </a> --}}
         </div>
         <!-- Right -->
     </section>
@@ -43,7 +43,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                {{-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
                         Products
@@ -60,7 +60,7 @@
                     <p>
                         <a href="#!" class="text-reset">Laravel</a>
                     </p>
-                </div>
+                </div> --}}
                 <!-- Grid column -->
 
                 <!-- Grid column -->
@@ -73,13 +73,13 @@
                         <a href="#" class="text-reset">Student Portal</a>
                     </p>
                     <p>
-                        <a href="#" class="text-reset">Available Courses</a>
+                        <a href="/admissions#all-courses" class="text-reset">Available Courses</a>
                     </p>
-                    <p>
+                    {{-- <p>
                         <a href="#" class="text-reset">Orders</a>
-                    </p>
+                    </p> --}}
                     <p>
-                        <a href="#" class="text-reset">Help</a>
+                        <a href="/#get-in-touch" class="text-reset">Help</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -93,8 +93,8 @@
                         <i class="bi bi-envelope-at"></i>
                         info@palmate.com
                     </p>
-                    <p><i class="bi bi-telephone"></i> + 254 111 521 1101 </p>
-                    <p><i class="bi bi-telephone"></i> + 254 111 521 1101 </p>
+                    <p><i class="bi bi-telephone"></i> + 254 111 521 101 </p>
+                    <p><i class="bi bi-telephone"></i> + 254 796 375 258 </p>
 
 
                 </div>

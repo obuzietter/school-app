@@ -36,13 +36,8 @@
                 </div>
                 <div class="row">
                     <div class="col d-flex justify-content-center align-items-center mt-3" style="min-width: 300px;">
-                        <p class="px-2">
-                            At <span class="text-warning">Palmate Institute</span>, we believe in the power of
-                            technology to change the world. Our
-                            mission is to ignite curiosity, fuel creativity, and equip the next generation of innovators
-                            with the skills they need to thrive in a digital-first future. From AI and mobile app
-                            development to web design and beyond, we offer cutting-edge courses that combine theory with
-                            hands-on experience, empowering you to lead in tomorrow’s tech-driven landscape.
+                        <p class="px-2 lh-lg">
+                            Founded in 2023, our institute began with a simple goal: to make quality web development education accessible to aspiring tech enthusiasts in our community. Recognizing the demand for digital skills in today’s job market, we established our first web development course, blending practical skills with industry-relevant knowledge. With a dedicated team of instructors and a passion for innovation, we strive to empower students to thrive in the evolving tech landscape.
                         </p>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
@@ -61,7 +56,7 @@
 
         </section>
         {{-- mission vision section --}}
-        <section class="d-flex justify-content-center align-items-center flex-wrap"  style="min-height: 100dvh">
+        <section class="d-flex justify-content-center align-items-center flex-wrap"  style="min-height: 100dvh; background: url('/aAnimated-Shape.svg')">
 
             <div class="container-fluid mt-5  px-5">
 
@@ -79,8 +74,8 @@
                         <h1 class="text-warning">
                             Our Mission
                         </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend, sem ac feugiat scelerisque, metus quam dapibus dolor, ut lacinia est felis a purus. Proin euismod blandit libero, non facilisis massa lobortis a. Duis a libero convallis felis dignissim congue non at quam. In et accumsan dolor.
+                        <p class="lh-lg">
+                            To provide accessible, high-quality education in technology that equips learners with the skills, creativity, and confidence needed to succeed in a digital world.
                         </p>
                     </div>
                 </div>
@@ -96,11 +91,8 @@
                             Our Vision
                         </h1>
 
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend, sem ac feugiat
-                            scelerisque, metus quam dapibus dolor, ut lacinia est felis a purus. Proin euismod blandit
-                            libero, non facilisis massa lobortis a. Duis a libero convallis felis dignissim congue non
-                            at quam. In et accumsan dolor.
+                        <p class="lh-lg">
+                            To become a leading center for technology education, expanding our impact through diverse, innovative programs that inspire lifelong learning and foster future-ready talent.
                         </p>
                     </div>
 
@@ -136,10 +128,9 @@
                             style="height: 150px; width:150px; border-radius:100%; object-fit:cover;" />
                         <div class="card-body">
                             <h3 class="card-title">Victor Ombeba</h3>
-                            <h5>~ CEO ~</h5>
+                            <h6>~ CO-FOUNDER ~</h6>
                             <p class="card-text">
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                "Inspiring growth and change begins with empowering others to realize their full potential."
                             </p>
 
                         </div>
@@ -151,10 +142,9 @@
                             style="height: 150px; width:150px; border-radius:100%; object-fit:cover;" />
                         <div class="card-body">
                             <h3 class="card-title">Calvince Obuya</h3>
-                            <h5>~ CEO ~</h5>
+                            <h6>~ CO-FOUNDER ~</h6>
                             <p class="card-text">
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                "The foundation of success lies in dedication, resilience, and a commitment to lifelong learning."
                             </p>
 
                         </div>

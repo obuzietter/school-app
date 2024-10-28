@@ -41,7 +41,7 @@
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
                         <picture class="bg-dark" style="border-radius: 100%;">
                             <source
-                                srcset="https://img.freepik.com/free-vector/happy-corporate-man-done-his-job-as-vison-mission-celebrating-leadership-success-career-progress-concept-flat-illustration_1150-37407.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
+                                srcset="https://img.freepik.com/free-vector/people-cooperating-make-puzzle_23-2148077316.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                                 type="image/svg+xml">
                             <img src="" class="img-fluid img-thumbnail" alt="..."
                                 style="border: none; padding:0; height:200px; width:200px; border-radius: 100%; margin: 1.2rem 0 1.2rem 1.2rem; ">
@@ -50,13 +50,10 @@
                     <div class="col d-flex flex-column justify-content-center align-items-start mt-3"
                         style="min-width: 300px;">
                         <h1 class="text-warning">
-                            SOMETHING
+                            Connect & Collaborate
                         </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend, sem ac feugiat
-                            scelerisque, metus quam dapibus dolor, ut lacinia est felis a purus. Proin euismod blandit
-                            libero, non facilisis massa lobortis a. Duis a libero convallis felis dignissim congue non
-                            at quam. In et accumsan dolor.
+                        <p class="lh-lg">
+                            Join a vibrant community of learners eager to grow and support one another. Share your journey, exchange ideas, and collaborate on projects with fellow students who are just as passionate about learning as you are. Together, we’re building a network that thrives on knowledge and encouragement.
                         </p>
                     </div>
                 </div>
@@ -69,14 +66,11 @@
                     <div class="col d-flex flex-column justify-content-center align-items-start mt-3"
                         style="min-width: 300px;">
                         <h1 class="text-warning">
-                            SOMETHING
+                            Events & Workshops
                         </h1>
 
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend, sem ac feugiat
-                            scelerisque, metus quam dapibus dolor, ut lacinia est felis a purus. Proin euismod blandit
-                            libero, non facilisis massa lobortis a. Duis a libero convallis felis dignissim congue non
-                            at quam. In et accumsan dolor.
+                        <p class="lh-lg">
+                            Expand your skills and gain real-world experience through our events and webinars. From coding challenges to guest lectures, these interactive sessions provide hands-on learning and opportunities to connect with industry professionals.
                         </p>
                     </div>
 
@@ -84,7 +78,7 @@
 
                         <picture class="bg-dark" style="border-radius: 100%;">
                             <source
-                                srcset="https://img.freepik.com/premium-vector/vector-someone-using-binoculars-with-simple-minimalist-flat-design-style_995281-40588.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
+                                srcset="https://img.freepik.com/free-vector/workplace-culture-abstract-concept-vector-illustration-shared-values-belief-systems-attitude-work-company-team-corporate-culture-high-performance-employee-health-abstract-metaphor_335657-4191.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                                 type="image/svg+xml">
                             <img src="" class="img-fluid img-thumbnail" alt="..."
                                 style="border: none; padding:0; height:200px; width:200px; border-radius: 100%; margin: 1.2rem 1.2rem 1.2rem 0; ">

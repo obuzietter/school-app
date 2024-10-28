@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top p-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Palmate</a>
+            <a class="navbar-brand text-warning fw-bold" href="/">Palmate</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -17,9 +17,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/admissions">ADMISSIONS</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#">PROGRAMS</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="/community" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,12 +31,15 @@
                             
                         </ul>
                     </li>
+                    
+                </ul>
+                <ul class="navbar-nav ms-auto">
                     <li>
                         <button type="button" class="btn btn-outline-warning">Enroll Now</button>
 
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto">
+                {{-- <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,7 +51,7 @@
                             <li><a class="dropdown-item" href="#">Logout</a></li>
                         </ul>
                     </li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </nav>
