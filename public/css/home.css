@@ -1,0 +1,67 @@
+.btn-outline-warning{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: .1s ease-in-out!important;
+    &:hover{
+        color: white;
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        transform: scaleX(1.1);
+    }
+}
+.btn-warning{
+    /* color: white;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color); */
+    transition: .1s ease-in-out!important;
+    &:hover{
+        /* color: var(--primary-color);
+        background-color: white;
+        border-color: var(--primary-color); */
+        transform: scaleX(1.1);
+        
+    }
+}
+.text-warning{
+    color: var(--primary-color)!important;
+}
+
+/* typing animation */
+/* Cursor */
+.cursor{
+    position: relative;
+    width: 24em;
+    /* border: 2px solid red; */
+    /* width: fit-content; */
+    margin: 0 auto;
+    border-right: 4px solid rgba(255,255,255,.75);
+    /* font-size: 30px; */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+  animation: 
+    typewriter 5s steps(50) 1s 1 normal both, 
+    blinkingCursor 500ms steps(25) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: var(--primary-color); }
+  to { border-right-color: transparent; }
+}
+
+
+
+
+
+
+
+
+
+

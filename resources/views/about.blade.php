@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ABOUT US</title>
     @include('head-links')
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/animations.css">
 </head>
 
 <body>
@@ -16,7 +18,7 @@
         {{-- hero section --}}
         <section class="d-flex" style="min-height: 50vh; background-image:url(/images/bg.jpeg); background-size:cover">
             <div class="container-fluid"
-                style="display: grid; place-items:center;flex: 1; background: linear-gradient(to right, rgba(0, 0, 0, 0.892), rgba(0, 0, 0, 0.641), rgba(0, 0, 0, 0.892))">
+                style="display: grid; place-items:center;flex: 1; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.774), rgba(0, 0, 0))">
                 <div class="container-fluid px-10">
                     <div class="row">
                         <div class="col text-white" style="min-width: 300px">
@@ -42,7 +44,7 @@
                     </div>
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
 
-                        <picture>
+                        <picture class="fade-in">
                             <source
                                 srcset="https://img.freepik.com/premium-photo/premium-photo-render-aesthetic-arc-gate-ring-light-background-scenes_1033579-198092.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid-rr-similar"
                                 type="image/svg+xml">
@@ -62,7 +64,7 @@
 
                 <div class="d-flex flex-wrap-reverse">
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
-                        <picture class="bg-dark" style="border-radius: 100%;">
+                        <picture class="bg-dark fade-in" style="border-radius: 100%;">
                             <source
                                 srcset="https://img.freepik.com/free-vector/happy-corporate-man-done-his-job-as-vison-mission-celebrating-leadership-success-career-progress-concept-flat-illustration_1150-37407.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                                 type="image/svg+xml">
@@ -98,7 +100,7 @@
 
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
 
-                        <picture class="bg-dark" style="border-radius: 100%;">
+                        <picture class="bg-dark fade-in" style="border-radius: 100%;">
                             <source
                                 srcset="https://img.freepik.com/premium-vector/vector-someone-using-binoculars-with-simple-minimalist-flat-design-style_995281-40588.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                                 type="image/svg+xml">
@@ -121,7 +123,7 @@
             </div>
             <div class="row">
                 <div class="card-group justify-content-center">
-                    <div class="card mx-3 text-center"
+                    <div class="card mx-3 text-center fade-in"
                         style="max-width: 18rem;border: none; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                         <img src="https://img.freepik.com/premium-photo/portrait-black-african-man-standing-with-arm-crossed-black-people-concept_1025753-140852.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                             class="card-img-top mx-auto mt-3" alt="Hollywood Sign on The Hill"
@@ -135,7 +137,7 @@
 
                         </div>
                     </div>
-                    <div class="card mx-3 text-center"
+                    <div class="card mx-3 text-center fade-in"
                         style="max-width: 18rem; border: none; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                         <img src="https://img.freepik.com/free-photo/young-handsome-man-posing_23-2148884333.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                             class="card-img-top mx-auto mt-3" alt="Hollywood Sign on The Hill"

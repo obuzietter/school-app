@@ -9,6 +9,8 @@
 
     @include('head-links')
 
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/animations.css">
 
 </head>
 
@@ -20,8 +22,8 @@
         {{-- Hero section --}}
         <section class="d-flex" style="min-height: 80vh; background-image:url(/images/bg.jpeg); background-size:cover">
             <div class="container-fluid"
-                style="display: grid; place-items:center;flex: 1; background: linear-gradient(to right, rgba(0, 0, 0, 0.734), rgba(128, 128, 128, 0.307), rgba(0, 0, 0, 0.773))">
-                <div class="container-fluid px-10">
+                style="display: grid; place-items:center;flex: 1; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.774), rgba(0, 0, 0))">
+                <div class="container-fluid px-5">
                     <div class="row">
                         <div class="col text-white" style="min-width: 300px">
                             <div class="row">
@@ -50,9 +52,9 @@
                         </div>
                         <div class="col text-warning py-3 d-flex justify-content-center align-items-center"
                             style="min-width: 300px">
-                            <h1>
+                            {{-- <h1 class="cursor typewriter-animation">
                                 LEARN . CREATE . INNOVATE
-                            </h1>
+                            </h1> --}}
                         </div>
                     </div>
 
@@ -61,22 +63,22 @@
         </section>
         {{-- Intro section --}}
         <section>
-            <div class="container-fluid">
+            <div class="container-fluid px-5">
                 <div class="row">
                     <h1 class="text-center my-5 text-warning">Your Gateway to the Future of Tech</h1>
                 </div>
                 <div class="row">
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
 
-                        <picture>
+                        <picture class="fade-in">
                             <source
-                                srcset="https://img.freepik.com/premium-photo/premium-photo-render-aesthetic-arc-gate-ring-light-background-scenes_1033579-198092.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid-rr-similar"
+                                srcset="https://img.freepik.com/free-vector/flat-safer-internet-day-background_52683-154501.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_siglip"
                                 type="image/svg+xml">
                             <img src="" class="img-fluid img-thumbnail" alt="..." style="border: none; ">
                         </picture>
                     </div>
-                    <div class="col d-flex justify-content-center align-items-center mt-3" style="min-width: 300px;">
-                        <p class="lh-lg">
+                    <div class="col d-flex align-items-center mt-3" style="min-width: 300px;">
+                        <p class="lh-lg px-lg-5 px-2">
                             Welcome to Palmate Academy. we are committed to providing high-quality, practical training
                             to help you build essential skills in technology. Currently, we offer an in-depth Web
                             Development course, guiding students through both front-end and back-end technologies to
@@ -91,7 +93,7 @@
         </section>
 
         <section>
-            <div class="container-fluid">
+            <div class="container-fluid px-5">
                 <div class="row">
                     <h1 class="text-center my-5 text-warning">Why Choose Palmate?</h1>
                 </div>
@@ -100,10 +102,9 @@
                     justify-content-center align-items-center"
                         style="min-width: 300px;">
                         <p class="text-center lh-lg">
-                            <span class="text-warning">Palmate Institute</span> is more than just a school. We’re a
-                            community of
-                            learners, creators, and innovators who are passionate about technology and its potential to
-                            change the world. Here are a few reasons why students choose Palmate:
+                            We are a community of learners, creators, and innovators who are passionate about technology and its potential to change the world. 
+                            <br>
+                            We have:
                         </p>
                     </div>
 
@@ -134,13 +135,12 @@
                 <div class="row d-flex justify-content-center">
                     <p class="text-center">
                         Develop essential skills in programming and web development,
-                        preparing you for success in the fast-paced tech industry. These are some of the most popular
-                        courses.
+                        preparing you for success in the fast-paced tech industry. 
                         {{-- <span class="text-warning">Explore Courses.</span> --}}
                     </p>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="card m-2" style="width: 20rem;">
+                    <div class="card m-2 fade-in" style="width: 20rem;">
 
                         <img class="card-img-top"
                             src="https://img.freepik.com/premium-photo/free-picture-computer-laptop-program-code_934342-141.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
@@ -165,7 +165,7 @@
                                 </div>
                                 <div class="col">
                                     {{-- <button type="button" class="btn btn-outline-success w-100" data-toggle="modal" data-target="#exampleModalCenter">Enroll Now</button> --}}
-                                    <button type="button" class="btn btn-outline-success w-100">Enroll Now</button>
+                                    <button type="button" class="btn btn-outline-warning w-100">Enroll Now</button>
 
                                 </div>
                             </div>
@@ -176,10 +176,10 @@
                                 <div class="modal-content">
                                     <div class="modal-header d-flex justify-content-between">
                                         <h5 class="modal-title" id="exampleModalLongTitle">Course Details</h5>
-                                        <button type="button" class="close bg-danger text-white"
+                                        {{-- <button type="button" class="close bg-danger text-white"
                                             data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        </button> --}}
                                     </div>
                                     <div class="modal-body">
                                         <h5>Prerequisites</h5>
@@ -203,7 +203,7 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn btn-warning"
                                             data-bs-dismiss="modal">Close</button>
 
                                     </div>
@@ -212,7 +212,7 @@
                         </div>
 
                     </div>
-                    <div class="card m-2" style="width: 20rem;">
+                    <div class="card m-2 fade-in" style="width: 20rem;">
 
                         <img class="card-img-top"
                             src="https://img.freepik.com/premium-photo/free-picture-computer-laptop-program-code_934342-141.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
@@ -236,12 +236,12 @@
                                     <button type="button" class="btn btn-warning w-100">Learn More</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-outline-success w-100">Enroll Now</button>
+                                    <button type="button" class="btn btn-outline-warning w-100">Enroll Now</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card m-2" style="width: 20rem;">
+                    <div class="card m-2 fade-in" style="width: 20rem;">
 
                         <img class="card-img-top"
                             src="https://img.freepik.com/premium-photo/free-picture-computer-laptop-program-code_934342-141.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
@@ -264,7 +264,7 @@
                                     <button type="button" class="btn btn-warning w-100">Learn More</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-outline-success w-100">Enroll Now</button>
+                                    <button type="button" class="btn btn-outline-warning w-100">Enroll Now</button>
                                 </div>
                             </div>
                         </div>
@@ -285,10 +285,11 @@
         <section class="mt-5" id="get-in-touch">
             <div class="container-fluid py-5 bg-dark text-white">
                 <div class="row">
-                    <div class="col" style="min-width: 300px">
+                    <div class="col d-flex justify-content-center align-items-center fade-in" style="min-width: 300px">
                         <img src="https://img.freepik.com/premium-photo/creative-technology-communication-concept_23-2148945731.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
-                            class="img-fluid img-thumbnail" alt="..." width="100%">
+                            class="img-fluid img-thumbnail" alt="..." style="max-width: 100%;">
                     </div>
+                    
                     <div class="col" style="min-width: 300px">
                         <h1>Get in Touch</h1>
                         <p>Have questions about our programs or want to learn more about how Palmate can help

@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>COMMUNITY</title>
     @include('head-links')
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="/css/animations.css">
 </head>
 
 <body>
@@ -15,7 +18,7 @@
         {{-- hero section --}}
         <section class="d-flex" style="min-height: 50vh; background-image:url(/images/bg.jpeg); background-size:cover">
             <div class="container-fluid"
-                style="display: grid; place-items:center;flex: 1; background: linear-gradient(to right, rgba(0, 0, 0, 0.892), rgba(0, 0, 0, 0.641), rgba(0, 0, 0, 0.892))">
+                style="display: grid; place-items:center;flex: 1; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.774), rgba(0, 0, 0))">
                 <div class="container-fluid px-10">
                     <div class="row">
                         <div class="col text-white" style="min-width: 300px">
@@ -39,7 +42,7 @@
 
                 <div class="d-flex flex-wrap-reverse">
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
-                        <picture class="bg-dark" style="border-radius: 100%;">
+                        <picture class="bg-dark fade-in" style="border-radius: 100%;">
                             <source
                                 srcset="https://img.freepik.com/free-vector/people-cooperating-make-puzzle_23-2148077316.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                                 type="image/svg+xml">
@@ -76,7 +79,7 @@
 
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
 
-                        <picture class="bg-dark" style="border-radius: 100%;">
+                        <picture class="bg-dark fade-in" style="border-radius: 100%;">
                             <source
                                 srcset="https://img.freepik.com/free-vector/workplace-culture-abstract-concept-vector-illustration-shared-values-belief-systems-attitude-work-company-team-corporate-culture-high-performance-employee-health-abstract-metaphor_335657-4191.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                                 type="image/svg+xml">

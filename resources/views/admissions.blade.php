@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ADMISSIONS</title>
     @include('head-links')
+    <link rel="stylesheet" href="/css/admissions.css">
+    <link rel="stylesheet" href="/css/animations.css">
 </head>
 
 <body>
@@ -16,7 +18,7 @@
         {{-- hero section --}}
         <section class="d-flex" style="min-height: 50vh; background-image:url(/images/bg.jpeg); background-size:cover">
             <div class="container-fluid"
-                style="display: grid; place-items:center;flex: 1; background: linear-gradient(to right, rgba(0, 0, 0, 0.892), rgba(0, 0, 0, 0.641), rgba(0, 0, 0, 0.892))">
+                style="display: grid; place-items:center;flex: 1; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.774), rgba(0, 0, 0))">
                 <div class="container-fluid px-10">
                     <div class="row">
                         <div class="col text-white" style="min-width: 300px">
@@ -52,7 +54,7 @@
                 <h1 class="text-warning text-center">All Courses</h1>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="card m-2" style="width: 20rem;">
+                <div class="card m-2 fade-in" style="width: 20rem;">
 
                     <img class="card-img-top"
                         src="https://img.freepik.com/premium-photo/free-picture-computer-laptop-program-code_934342-141.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
@@ -80,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card m-2" style="width: 20rem;">
+                <div class="card m-2 fade-in" style="width: 20rem;">
 
                     <img class="card-img-top"
                         src="https://img.freepik.com/premium-photo/free-picture-computer-laptop-program-code_934342-141.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
@@ -109,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card m-2" style="width: 20rem;">
+                <div class="card m-2 fade-in" style="width: 20rem;">
 
                     <img class="card-img-top"
                         src="https://img.freepik.com/premium-photo/free-picture-computer-laptop-program-code_934342-141.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
@@ -147,7 +149,7 @@
             <div class="row mb-5">
                 <h1 class="text-warning text-center">Frequently Asked Questions (FAQs)</h1>
             </div>
-            <div class="row justify-content-center mb-5">
+            <div class="row justify-content-center mb-5 fade-in">
                 <div class="accordion" id="accordionPanelsStayOpenExample" style="min-width: 300px; max-width:75%;">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingOne">
