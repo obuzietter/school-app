@@ -1,4 +1,5 @@
-<form>
+<form action="/send-application-mail" method="POST">
+    @csrf
     <div class="form-group">
         <label for="first-name">First Name</label>
         <input type="text" class="form-control" id="first-name"
@@ -31,3 +32,9 @@
 
 
 </form>
+
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
