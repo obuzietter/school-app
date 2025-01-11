@@ -149,31 +149,7 @@
                             build a career in tech? Our team is ready to assist with any inquiries. Feel free to reach
                             out via the contact form below, give us a call, or send us an email. We’ll get back to you
                             as soon as possible!</p>
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1"
-                                    class="form-label
-                                    ">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputName"
-                                    class="form-label
-                                    ">Name</label>
-                                <input type="text" class="form-control" id="exampleInputName">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputMessage"
-                                    class="form-label
-                                    ">Message</label>
-                                <textarea class="form-control" id="exampleInputMessage" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-warning">Submit</button>
-
-
-                        </form>
+                        @include('inquiry.inquiry-form')
                     </div>
                 </div>
 

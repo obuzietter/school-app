@@ -7,6 +7,8 @@ use App\Http\Controllers\CourseController;
 use App\Mail\ApplicationMail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\FirebaseController;
+use App\Http\Controllers\InquiryController;
+
 Route::get('/', [CourseController::class, 'fetchCourses']);
 
 
@@ -18,6 +20,8 @@ Route::get('/application-form', [ApplicationController::class, 'getCourses'])->n
 
 Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store');
 Route::get('/courses/{id}', [CourseController::class, 'showCourse'])->name('courses.show');
+
+Route::post('/send-inquiry', [InquiryController::class, 'store'])->name('inquiry.store');
 
 // Route::post('/applications', function(){
 //     dd('Your application has been submitted successfully!');

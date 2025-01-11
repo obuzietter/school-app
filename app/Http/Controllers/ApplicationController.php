@@ -49,7 +49,7 @@ class ApplicationController extends Controller
 
             // Send the email
             try {
-                Mail::to($request->email)->send(new ApplicationMail($validated));
+                Mail::to('obuyacalvince672@gmail.com')->send(new ApplicationMail($validated));
             } catch (Exception $e) {
                 Log::error('Email sending failed', ['error' => $e->getMessage()]);
                 return redirect('/application-form')->with('errors', 'Application saved, but email notification failed. Please contact support.');
