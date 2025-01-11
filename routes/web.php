@@ -12,11 +12,13 @@ Route::get('/', [CourseController::class, 'fetchCourses']);
 
 Route::view('/about', 'about');
 // Route::view('/admissions', 'admissions');
-Route::get('/admissions', [CourseController::class, 'fetchCourses']);
+Route::get('/admissions', [CourseController::class, 'fetchCoursesAd']);
 Route::view('/community', 'community');
-Route::view('/application-form', 'enroll.application-form')->name('application-form');
+Route::get('/application-form', [ApplicationController::class, 'getCourses'])->name('application-form');
 
 Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store');
+Route::get('/courses/{id}', [CourseController::class, 'showCourse'])->name('courses.show');
+
 // Route::post('/applications', function(){
 //     dd('Your application has been submitted successfully!');
 // })->name('applications.store');

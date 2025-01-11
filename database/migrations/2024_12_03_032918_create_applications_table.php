@@ -17,12 +17,10 @@ return new class extends Migration
             $table->string('last_name');
             $table->date('date_of_birth');
             $table->string('gender');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('phone');
             $table->string('education');
             $table->string('course');
-            // $table->string('institution');
-            // $table->string('job_title');
             $table->string('preferred_intake');
             $table->string('referral');
             $table->text('additional_info')->nullable();

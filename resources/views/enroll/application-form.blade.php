@@ -32,11 +32,6 @@
         <h2 class="text-center mt-5">
             <hr>
         </h2>
-
-
-
-
-
         <form method="POST" action="{{ route('applications.store') }}" class="mt-5">
             @csrf
             <h2 class="text-center mt-5">
@@ -44,6 +39,7 @@
             </h2>
             @include('enroll.success')
             @include('enroll.errors')
+
             <!-- Part 1: Personal Information -->
             <fieldset class="border p-3 mb-4">
                 <legend class="w-auto px-2">1. Personal Information</legend>
@@ -107,17 +103,17 @@
                         <label for="course" class="form-label">What Course Are You Applying For?</label>
                         <select id="course" name="course" class="form-select" required>
                             <option value="" disabled selected>Select Course</option>
-                            <option value="course1">Web Design (UI/UX Design)</option>
-                            <option value="course2">Web Development 1 (Introduction To Web Development)</option>
-                            <option value="course3">Web Development 2 (Advanced Web Development)</option>
-                            <option value="course4">Web Development 3 (Full Stack Web Development)</option>
+
+                            @forelse ($courses as $course)
+                                <option value="{{ $course->id }}">{{ $course->title }}</option>
+                            @empty
+                                <option value="">No courses available</option>
+                            @endforelse
+
 
                         </select>
                     </div>
-                    {{-- <div class="col-md-6">
-                        <label for="institution" class="form-label">Institution Attended</label>
-                        <input type="text" id="institution" name="institution" class="form-control" placeholder="Enter the name of your institution" required>
-                    </div> --}}
+
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
@@ -130,83 +126,72 @@
                         </select>
                     </div>
                 </div>
-                {{-- <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="jobTitle" class="form-label">Job Title</label>
-                        <select id="jobTitle" name="job_title" class="form-select" required>
-                            <option value="" disabled selected>Select your current job title</option>
-                            <option value="student">Student</option>
-                            <option value="intern">Intern</option>
-                            <option value="junior">Junior Position</option>
-                            <option value="senior">Senior Position</option>
-                            <option value="other">Other</option>
-                        </select>
+            </fieldset>
+            <!-- Part 3: Other Information -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto px-2">3. Other Information</legend>
+                <div class="mb-3">
+                    <label for="referral" class="form-label">How did you hear about us?</label>
+                    <select id="referral" name="referral" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="friends">Friends</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="website">Website</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="additionalInfo" class="form-label">Additional Information</label>
+                    <textarea id="additionalInfo" name="additional_info" class="form-control" rows="3"
+                        placeholder="Provide any additional details"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Part 4: Payment Instructions -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto px-2">4. Fee Payment Instructions</legend>
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="card-title mb-0">M-Pesa Payment Instructions</h5>
                     </div>
-                    --}}
-
-    </div>
-    </fieldset>
-
-    <!-- Part 3: Other Information -->
-    <fieldset class="border p-3 mb-4">
-        <legend class="w-auto px-2">3. Other Information</legend>
-        <div class="mb-3">
-            <label for="referral" class="form-label">How did you hear about us?</label>
-            <select id="referral" name="referral" class="form-select" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="friends">Friends</option>
-                <option value="social_media">Social Media</option>
-                <option value="website">Website</option>
-                <option value="advertisement">Advertisement</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="additionalInfo" class="form-label">Additional Information</label>
-            <textarea id="additionalInfo" name="additional_info" class="form-control" rows="3"
-                placeholder="Provide any additional details"></textarea>
-        </div>
-    </fieldset>
-
-    <!-- Part 4: Payment Instructions -->
-    <fieldset class="border p-3 mb-4">
-        <legend class="w-auto px-2">4. Fee Payment Instructions</legend>
-        <div class="card shadow-sm">
-            <div class="card-header bg-success text-white">
-                <h5 class="card-title mb-0">M-Pesa Payment Instructions</h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Follow these simple steps to make a payment using M-Pesa Paybill:</p>
-                <ol>
-                    <li>Go to the M-Pesa menu on your phone.</li>
-                    <li>Select <strong>Lipa na M-Pesa</strong>.</li>
-                    <li>Select <strong>Paybill</strong>.</li>
-                    <li>Enter the <strong>Business Number</strong>: <span class="fw-bold">400200</span></li>
-                    <li>Enter the <strong>Account Number</strong>: <span class="fw-bold">0111521101</span></li>
-                    <li>Enter the amount (KES 2, 500/=).</li>
-                    <li>Enter your M-Pesa PIN and confirm the transaction.</li>
-                    <li>Wait for the confirmation SMS from M-Pesa.</li>
-                    <li>Copy and paste the SMS down below</li>
-                    <div class="col-md-6">
-                        <label for="confirmationMessage" class="form-label">Confirmation Message</label>
-                        <input type="text" id="confirmationMessage" name="confirmation_message"
-                            class="form-control" placeholder="Paste the M-Pesa confirmation code here">
+                    <div class="card-body">
+                        <p class="card-text">Follow these simple steps to make a payment using M-Pesa Paybill:</p>
+                        <ol>
+                            <li>Go to the M-Pesa menu on your phone.</li>
+                            <li>Select <strong>Lipa na M-Pesa</strong>.</li>
+                            <li>Select <strong>Paybill</strong>.</li>
+                            <li>Enter the <strong>Business Number</strong>: <span class="fw-bold">400200</span></li>
+                            <li>Enter the <strong>Account Number</strong>: <span class="fw-bold">0111521101</span></li>
+                            <li>Enter the amount (KES 2, 500/=).</li>
+                            <li>Enter your M-Pesa PIN and confirm the transaction.</li>
+                            <li>Wait for the confirmation SMS from M-Pesa.</li>
+                            <li>Copy and paste the SMS down below</li>
+                            <div class="col-md-6">
+                                <label for="confirmationMessage" class="form-label">Confirmation Message</label>
+                                <input type="text" id="confirmationMessage" name="confirmation_message"
+                                    class="form-control" placeholder="Paste the M-Pesa confirmation code here">
+                            </div>
+                        </ol>
+                        <p class="mt-3">For assistance, please contact our support team at <strong>+254 111 521
+                                101</strong>.
+                        </p>
                     </div>
-                </ol>
-                <p class="mt-3">For assistance, please contact our support team at <strong>+254 111 521 101</strong>.
-                </p>
-            </div>
-        </div>
-    </fieldset>
-
-    <!-- Submit Button -->
-    <div class="text-center">
-        <button type="submit" class="btn btn-success" style="background-color: var(--primary-color)">Submit
-            Application</button>
+                </div>
+            </fieldset>
+            <fieldset class="border p-3 mb-4">
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success"
+                        style="background-color: var(--primary-color)">Submit
+                        Application</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
-    </form>
 
-    </div>
+
+    
 
 
 </body>

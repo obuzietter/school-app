@@ -102,7 +102,8 @@
                     justify-content-center align-items-center"
                         style="min-width: 300px;">
                         <p class="text-center lh-lg">
-                            We are a community of learners, creators, and innovators who are passionate about technology and its potential to change the world. 
+                            We are a community of learners, creators, and innovators who are passionate about technology
+                            and its potential to change the world.
                             <br>
                             We have:
                         </p>
@@ -127,127 +128,8 @@
 
         </section>
         {{-- Courses section --}}
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <h1 class="text-center my-5 text-warning">All Courses</h1>
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <p class="text-center">
-                        Develop essential skills in programming and web development,
-                        preparing you for success in the fast-paced tech industry. 
-                        {{-- <span class="text-warning">Explore Courses.</span> --}}
-                    </p>
-                </div>
-                <div class="row d-flex justify-content-center">
+        @include('courses.all_courses')
 
-                    @forelse ($courses as $course)
-                    <div class="card m-2 fade-in" style="width: 20rem;">
-
-                        <img class="card-img-top"
-                            src="storage/{{$course->image_url}}"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <span class="badge badge-danger bg-danger">{{$course->badge}}</span>
-
-                            <h5 class="card-title">{{$course->title}}</h5>
-                            <ul>
-                                                             
-                                
-                                    @php
-                                        $highlights = is_string($course->highlights) ? json_decode($course->highlights, true) : $course->highlights;
-                                    @endphp
-                                    @if ($highlights && is_array($highlights))
-                                        
-                                            @foreach ($highlights as $highlight)
-                                                <li>{{ is_array($highlight) ? implode(', ', $highlight) : $highlight }}</li>
-                                            @endforeach
-                                        
-                                    @else
-                                        <span>No data available</span>
-                                    @endif
-                                
-
-                            </ul>
-
-                        </div>
-                        <div class="card-footer">
-                            <div class="row">
-                                <div class="col">
-                                    <button type="button" class="btn btn-warning w-100" data-bs-toggle="modal"
-                                        data-bs-target="#{{$course->id}}">Learn More</button>
-                                </div>
-                                <div class="col">
-                                    {{-- <button type="button" class="btn btn-outline-success w-100" data-toggle="modal" data-target="#exampleModalCenter">Enroll Now</button> --}}
-                                    <button type="button" class="btn btn-outline-warning w-100">
-                                        <a href="/application-form">Enroll Now</a>
-                                    </button>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="{{$course->id}}" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header d-flex justify-content-between">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Course Details</h5>
-                                        {{-- <button type="button" class="close bg-danger text-white"
-                                            data-bs-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button> --}}
-                                    </div>
-                                    <div class="modal-body">
-                                        <h5>Prerequisites</h5>
-                                        <p>
-                                           {{$course->prerequisites}}
-                                        </p>
-                                        <h5>Course Description</h5>
-                                        <p>
-                                            {{$course->course_description}} 
-                                        </p>
-                                        <h5>Learning Schedule</h5>
-                                        <ul>
-                                            @php
-                                                $schedule = is_string($course->learning_schedule) ? json_decode($course->learning_schedule, true) : $course->learning_schedule;
-                                            @endphp
-                                            @if ($schedule && is_array($schedule))
-                                                
-                                                    @foreach ($schedule as $item)
-                                                        <li>{{ is_array($item) ? implode(', ', $item) : $item }}</li>
-                                                    @endforeach
-                                                
-                                            @else
-                                                <span>No data available</span>
-                                            @endif
-                                        </ul>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-warning"
-                                            data-bs-dismiss="modal">Close</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    @empty
-                        <div class="alert alert-warning" role="alert">
-                            No courses available
-                        </div>
-                    @endforelse
-                    
-                    
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
 
 
 
@@ -259,7 +141,7 @@
                         <img src="https://img.freepik.com/premium-photo/creative-technology-communication-concept_23-2148945731.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_hybrid"
                             class="img-fluid img-thumbnail" alt="..." style="max-width: 100%;">
                     </div>
-                    
+
                     <div class="col" style="min-width: 300px">
                         <h1>Get in Touch</h1>
                         <p>Have questions about our programs or want to learn more about how Palmate can help
@@ -431,11 +313,13 @@
     @include('footer')
     <!-- Footer -->
 
-    {{-- bootstrap js links --}}
-    @include('bootstrap-scripts')
 
 
+    {{-- <script src="/js/custom-js/course-swal.js"></script> --}}
 
+    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
 </body>
+{{-- bootstrap js links --}}
+@include('bootstrap-scripts')
 
 </html>
