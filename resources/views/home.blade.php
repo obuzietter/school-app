@@ -171,8 +171,8 @@
                                     style="width: 150px;" />
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-lg-8">
-                                        <h5 class="mb-3">Maria Kate</h5>
-                                        <p>Photographer</p>
+                                        <h5 class="mb-3">Anthony Weiszer</h5>
+                                        <p>Web Developer</p>
                                         <p class="text-muted">
                                             <i class="fas fa-quote-left pe-2"></i>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
@@ -197,7 +197,7 @@
                                     style="width: 150px;" />
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-lg-8">
-                                        <h5 class="mb-3">John Doe</h5>
+                                        <h5 class="mb-3">Margaret W</h5>
                                         <p>Web Developer</p>
                                         <p class="text-muted">
                                             <i class="fas fa-quote-left pe-2"></i>
