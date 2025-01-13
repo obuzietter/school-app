@@ -39,7 +39,12 @@
                 <div class="row">
                     <div class="col d-flex justify-content-center align-items-center mt-3" style="min-width: 300px;">
                         <p class="px-2 lh-lg">
-                            Founded in 2023, our institute began with a simple goal: to make quality web development education accessible to aspiring tech enthusiasts in our community. Recognizing the demand for digital skills in today’s job market, we established our first web development course, blending practical skills with industry-relevant knowledge. With a dedicated team of instructors and a passion for innovation, we strive to empower students to thrive in the evolving tech landscape.
+                            Founded in 2023, our institute began with a simple goal: to make quality web development
+                            education accessible to aspiring tech enthusiasts in our community. Recognizing the demand
+                            for digital skills in today’s job market, we established our first web development course,
+                            blending practical skills with industry-relevant knowledge. With a dedicated team of
+                            instructors and a passion for innovation, we strive to empower students to thrive in the
+                            evolving tech landscape.
                         </p>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center" style="min-width: 300px;">
@@ -58,7 +63,8 @@
 
         </section>
         {{-- mission vision section --}}
-        <section class="d-flex justify-content-center align-items-center flex-wrap"  style="min-height: 100dvh; background: url('/aAnimated-Shape.svg')">
+        <section class="d-flex justify-content-center align-items-center flex-wrap"
+            style="min-height: 100dvh; background: url('/aAnimated-Shape.svg')">
 
             <div class="container-fluid mt-5  px-5">
 
@@ -72,17 +78,19 @@
                                 style="border: none; padding:0; height:200px; width:200px; border-radius: 100%; margin: 1.2rem 0 1.2rem 1.2rem; ">
                         </picture>
                     </div>
-                    <div class="col d-flex flex-column justify-content-center align-items-start mt-3" style="min-width: 300px;">
+                    <div class="col d-flex flex-column justify-content-center align-items-start mt-3"
+                        style="min-width: 300px;">
                         <h1 class="text-warning">
                             Our Mission
                         </h1>
                         <p class="lh-lg">
-                            To provide accessible, high-quality education in technology that equips learners with the skills, creativity, and confidence needed to succeed in a digital world.
+                            To provide accessible, high-quality education in technology that equips learners with the
+                            skills, creativity, and confidence needed to succeed in a digital world.
                         </p>
                     </div>
                 </div>
-                
-                
+
+
             </div>
             <div class="container-fluid mt-5 px-5">
 
@@ -94,7 +102,8 @@
                         </h1>
 
                         <p class="lh-lg">
-                            To become a leading center for technology education, expanding our impact through diverse, innovative programs that inspire lifelong learning and foster future-ready talent.
+                            To become a leading center for technology education, expanding our impact through diverse,
+                            innovative programs that inspire lifelong learning and foster future-ready talent.
                         </p>
                     </div>
 
@@ -132,7 +141,8 @@
                             <h3 class="card-title">Victor Ombeba</h3>
                             <h6>~ CO-FOUNDER ~</h6>
                             <p class="card-text">
-                                "Inspiring growth and change begins with empowering others to realize their full potential."
+                                "Inspiring growth and change begins with empowering others to realize their full
+                                potential."
                             </p>
 
                         </div>
@@ -146,7 +156,8 @@
                             <h3 class="card-title">Calvince Obuya</h3>
                             <h6>~ CO-FOUNDER ~</h6>
                             <p class="card-text">
-                                "The foundation of success lies in dedication, resilience, and a commitment to lifelong learning."
+                                "The foundation of success lies in dedication, resilience, and a commitment to lifelong
+                                learning."
                             </p>
 
                         </div>
@@ -166,33 +177,7 @@
                         you build a career in tech? Our team is ready to assist with any inquiries. Feel free to reach
                         out via the contact form below, give us a call, or send us an email. We’ll get back to you
                         as soon as possible!</p>
-                    <form action="">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label
-                        ">Email
-                                address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputName" class="form-label
-                        ">Name</label>
-                            <input type="text" class="form-control" id="exampleInputName">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputMessage"
-                                class="form-label
-                        ">Message</label>
-                            <textarea class="form-control" id="exampleInputMessage" rows="3"></textarea>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-warning text-white"
-                                style="width:150px">Submit</button>
-                        </div>
-
-
-                    </form>
+                    @include('inquiry.inquiry-form')
                 </div>
             </div>
 
