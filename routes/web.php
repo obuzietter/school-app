@@ -8,6 +8,9 @@ use App\Mail\ApplicationMail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\FirebaseController;
 use App\Http\Controllers\InquiryController;
+use App\Http\Middleware\VerifyPin;
+use App\Http\Controllers\PinController;
+use Illuminate\Support\Facades\Log;
 
 Route::get('/', [CourseController::class, 'fetchCourses']);
 
@@ -23,20 +26,21 @@ Route::get('/courses/{id}', [CourseController::class, 'showCourse'])->name('cour
 
 Route::post('/send-inquiry', [InquiryController::class, 'store'])->name('inquiry.store');
 
-// Route::post('/applications', function(){
-//     dd('Your application has been submitted successfully!');
-// })->name('applications.store');
 
-//mail route
-// Route::get('/send-application-mail', function () {
-//     $name = 'Evanilson';
-//     Mail::to('whiteshadow3980@gmail.com')->send(new ApplicationMail($name)); 
-// });
 Route::post('/send-application-mail', [ApplicationController::class, 'sendApplicationMail']);
 
 
-Route::get('/mpesa-messages', [FirebaseController::class, 'showMpesaMessages']);
+Route::get('/mpesa-messages', [FirebaseController::class, 'showMpesaMessages'])->name('all.messages')->middleware(VerifyPin::class);
 
 Route::get('/messages', [FirebaseController::class, 'showMpesaMessages'])->name('messages.index');
 Route::post('/messages/store', [FirebaseController::class, 'storeMessages'])->name('messages.store');
 Route::post('/messages/delete', [FirebaseController::class, 'deleteMessages'])->name('messages.delete');
+
+Route::get('/enter-pin', function () {
+    return view('mpesa.pin-prompt');
+})->name('enter-pin');
+
+
+
+
+
