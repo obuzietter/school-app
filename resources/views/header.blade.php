@@ -12,7 +12,7 @@
                         <a class="nav-link active" aria-current="page" href="/">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">ABOUT US</a>
+                        <a class="nav-link" href="{{ route('about') }}">ABOUT US</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admissions">ADMISSIONS</a>

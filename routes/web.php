@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\FirebaseController;
 use App\Http\Controllers\InquiryController;
 use App\Http\Middleware\VerifyPin;
-use App\Http\Controllers\PinController;
+
 use Illuminate\Support\Facades\Log;
 
 Route::get('/', [CourseController::class, 'fetchCourses']);
 
 
-Route::view('/about', 'about');
+Route::view('/about', 'about')->name('about');
 // Route::view('/admissions', 'admissions');
 Route::get('/admissions', [CourseController::class, 'fetchCoursesAd']);
 Route::view('/community', 'community');
