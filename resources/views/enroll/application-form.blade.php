@@ -120,13 +120,14 @@
                         <label for="preferredIntake" class="form-label">Preferred Intake</label>
                         <select id="preferredIntake" name="preferred_intake" class="form-select" required>
                             <option value="" disabled selected>Which intake would you like to apply for?</option>
-                            <option value="january">January Intake</option>
-                            <option value="may">May Intake</option>
+                            <option value="march">March Intake</option>
+                            <option value="june">June Intake</option>
                             <option value="september">September Intake</option>
                         </select>
                     </div>
                 </div>
             </fieldset>
+            
             <!-- Part 3: Other Information -->
             <fieldset class="border p-3 mb-4">
                 <legend class="w-auto px-2">3. Other Information</legend>
@@ -142,11 +143,17 @@
                     </select>
                 </div>
                 <div class="mb-3">
+                    <label for="referralCode" class="form-label">Referral Code</label>
+                    <input type="text" id="referralCode" name="referral_code" class="form-control"
+                        placeholder="Enter referral code (if any)" maxlength="5">
+                </div>
+                <div class="mb-3">
                     <label for="additionalInfo" class="form-label">Additional Information</label>
                     <textarea id="additionalInfo" name="additional_info" class="form-control" rows="3"
                         placeholder="Provide any additional details"></textarea>
                 </div>
             </fieldset>
+
 
             <!-- Part 4: Payment Instructions -->
             <fieldset class="border p-3 mb-4">
@@ -182,8 +189,7 @@
             <fieldset class="border p-3 mb-4">
                 <!-- Submit Button -->
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success"
-                        style="background-color: var(--primary-color)">Submit
+                    <button type="submit" class="btn btn-success">Submit
                         Application</button>
                 </div>
             </fieldset>
@@ -191,7 +197,7 @@
     </div>
 
 
-    
+
 
 
 </body>

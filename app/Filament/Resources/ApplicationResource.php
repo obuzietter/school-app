@@ -146,7 +146,7 @@ class ApplicationResource extends Resource
                 // TextColumn::make('institution')->label('Institution'),
                 // TextColumn::make('job_title')->label('Job Title'),
                 TextColumn::make('course')->label('Course'),
-                TextColumn::make('referral')->label('Referral'),
+                TextColumn::make('referral_code')->label('Referral'),
 
                 TextColumn::make('preferred_intake')->label('Preferred Intake'),
                 

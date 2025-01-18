@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('education');
             $table->string('course');
             $table->string('preferred_intake');
-            $table->string('referral');
+            $table->string('referral_code')->nullable()->default('no_referral'); // Referral code column
             $table->text('additional_info')->nullable();
             $table->string('confirmation_message');
             $table->timestamps();
