@@ -37,7 +37,7 @@ class ApplicationController extends Controller
                 'preferred_intake' => 'required|string',
                 'referral_code' => 'nullable|string|exists:marketers,referral_code', // Validate referral code
                 'additional_info' => 'nullable|string',
-                'confirmation_message' => 'required|string|max:10',
+                'confirmation_message' => 'required|string|max:10|min:10',
             ]);
 
             // Save the data into the database

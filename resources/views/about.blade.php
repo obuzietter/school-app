@@ -124,7 +124,7 @@
 
         </section>
         {{-- team section --}}
-        <section class="mt-5">
+        {{-- <section class="mt-5">
             <div class="row mb-5">
                 <h1 class="text-warning text-center">
                     Our Team
@@ -166,7 +166,7 @@
 
                 </div>
             </div>
-        </section>
+        </section> --}}
         {{-- get in touch section --}}
         <section class="my-5">
             <div class="row justify-content-center">

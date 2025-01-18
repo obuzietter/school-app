@@ -15,7 +15,7 @@
 
              @forelse ($courses as $course)
                  <div class="card m-2 fade-in" style="width: 20rem;">
-                     <img class="card-img-top" src="{{ asset('storage/' . $course->image_url) }}" alt="Course Image">
+                     <img class="card-img-top" src="{{ url('/storage/' . $course->image_url) }}" alt="{{ $course->title }}">
                      <div class="card-body">
                          @if ($course->is_enabled)
                              <span class="badge badge-success bg-success">{{ $course->badge }}</span>

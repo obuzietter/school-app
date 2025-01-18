@@ -70,7 +70,7 @@
                         <div id="panelsStayOpen-1" class="accordion-collapse collapse show"
                             aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body">
-                                We have only two intakes in a year that is January Intake and June Intake
+                                We currently have 3 intakes in a year, that is March, June and September.
                             </div>
                         </div>
                     </div>

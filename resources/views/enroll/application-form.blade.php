@@ -173,9 +173,9 @@
                             <li>Enter the amount (KES 2, 500/=).</li>
                             <li>Enter your M-Pesa PIN and confirm the transaction.</li>
                             <li>Wait for the confirmation SMS from M-Pesa.</li>
-                            <li>Copy and paste the SMS down below</li>
+                            <li>Copy and paste the Transaction code below  <small>(It should Be 10 Characters Long)</small></li>
                             <div class="col-md-6">
-                                <label for="confirmationMessage" class="form-label">Confirmation Message</label>
+                                <label for="confirmationMessage" class="form-label">Transaction Code</label>
                                 <input type="text" id="confirmationMessage" name="confirmation_message"
                                     class="form-control" placeholder="Paste the M-Pesa confirmation code here">
                             </div>
