@@ -127,7 +127,7 @@
                     </div>
                 </div>
             </fieldset>
-            
+
             <!-- Part 3: Other Information -->
             <fieldset class="border p-3 mb-4">
                 <legend class="w-auto px-2">3. Other Information</legend>
@@ -145,8 +145,13 @@
                 <div class="mb-3">
                     <label for="referralCode" class="form-label">Referral Code</label>
                     <input type="text" id="referralCode" name="referral_code" class="form-control"
-                        placeholder="Enter referral code (if any)" maxlength="5">
+                        placeholder="Enter referral code (if any)" maxlength="5"
+                        value="{{ old('referral_code', request('referral_code')) }}"
+                        {{-- Optional: Make readonly if pre-filled  --}}
+                        {{ request('referral_code') ? 'readonly' : '' }} 
+                    />
                 </div>
+
                 <div class="mb-3">
                     <label for="additionalInfo" class="form-label">Additional Information</label>
                     <textarea id="additionalInfo" name="additional_info" class="form-control" rows="3"
@@ -173,7 +178,8 @@
                             <li>Enter the amount (KES 2, 500/=).</li>
                             <li>Enter your M-Pesa PIN and confirm the transaction.</li>
                             <li>Wait for the confirmation SMS from M-Pesa.</li>
-                            <li>Copy and paste the Transaction code below  <small>(It should Be 10 Characters Long)</small></li>
+                            <li>Copy and paste the Transaction code below <small>(It should Be 10 Characters
+                                    Long)</small></li>
                             <div class="col-md-6">
                                 <label for="confirmationMessage" class="form-label">Transaction Code</label>
                                 <input type="text" id="confirmationMessage" name="confirmation_message"

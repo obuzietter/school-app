@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('referral_code', 10)->unique();
+            $table->string('affiliate_link');
             $table->unsignedInteger('students_referred')->default(0);
             $table->timestamps();
         });

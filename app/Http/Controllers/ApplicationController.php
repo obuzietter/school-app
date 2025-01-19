@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Log;
 
 class ApplicationController extends Controller
 {
-    public function getCourses()
+    public function getCourses(Request $request)
     {
-        // Fetch all courses from the database
+        // Fetch all enabled courses from the database
         $courses = Course::where('is_enabled', 1)->get();
 
-        // Pass data to a view
-        return view('enroll.application-form', compact('courses'));
+        // Check if a referral code is present in the URL
+        $referralCode = $request->input('referral_code');
+
+        // Pass data (courses and referral code) to the view
+        return view('enroll.application-form', compact('courses', 'referralCode'));
     }
+
     public function store(Request $request)
     {
         try {

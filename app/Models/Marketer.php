@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Marketer extends Model
 {
     //
-    protected $fillable = ['name', 'email', 'referral_code', 'students_referred'];
+    // protected $fillable = ['name', 'email', 'referral_code', 'affiliate_link', 'students_referred'];
+    protected $guarded = [];
 }
