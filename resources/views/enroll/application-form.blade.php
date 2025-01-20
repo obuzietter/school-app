@@ -146,10 +146,8 @@
                     <label for="referralCode" class="form-label">Referral Code</label>
                     <input type="text" id="referralCode" name="referral_code" class="form-control"
                         placeholder="Enter referral code (if any)" maxlength="5"
-                        value="{{ old('referral_code', request('referral_code')) }}"
-                        {{-- Optional: Make readonly if pre-filled  --}}
-                        {{ request('referral_code') ? 'readonly' : '' }} 
-                    />
+                        value="{{ old('referral_code', request('referral_code')) }}" {{-- Optional: Make readonly if pre-filled  --}}
+                        {{ request('referral_code') ? 'readonly' : '' }} />
                 </div>
 
                 <div class="mb-3">
@@ -172,10 +170,11 @@
                         <ol>
                             <li>Go to the M-Pesa menu on your phone.</li>
                             <li>Select <strong>Lipa na M-Pesa</strong>.</li>
-                            <li>Select <strong>Paybill</strong>.</li>
-                            <li>Enter the <strong>Business Number</strong>: <span class="fw-bold">400200</span></li>
-                            <li>Enter the <strong>Account Number</strong>: <span class="fw-bold">0111521101</span></li>
-                            <li>Enter the amount (KES 2, 500/=).</li>
+                            <li>Select <strong>Buy Goods and Services</strong>.</li>
+                            <li>Enter the <strong>Till Number</strong>: <span class="fw-bold">3174638 </span></li>
+                            <li>Enter the <strong>Store Number</strong>: <span class="fw-bold">9551994</span><small> (If
+                                    requested)</small></li>
+                            <li>Enter the amount <strong>(KES 5, 000/=)</strong>.</li>
                             <li>Enter your M-Pesa PIN and confirm the transaction.</li>
                             <li>Wait for the confirmation SMS from M-Pesa.</li>
                             <li>Copy and paste the Transaction code below <small>(It should Be 10 Characters

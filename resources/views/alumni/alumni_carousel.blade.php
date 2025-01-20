@@ -10,8 +10,8 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="rounded-circle shadow-1-strong mb-4"
-                            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
-                            style="width: 150px;" />
+                        src="https://img.freepik.com/free-psd/middle-age-black-man-portrait-isolated_23-2151884915.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_incoming" alt="avatar"
+                        style="width: 150px; height: 150px; object-fit:cover" />
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-8">
                                 <h5 class="mb-3">Antony Weiszer</h5>
@@ -32,8 +32,8 @@
                     </div>
                     <div class="carousel-item">
                         <img class="rounded-circle shadow-1-strong mb-4"
-                            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
-                            style="width: 150px;" />
+                            src="https://img.freepik.com/free-photo/medium-shot-beautiful-african-girl-posing_23-2151438222.jpg?uid=R97350360&ga=GA1.1.569336961.1721632028&semt=ais_incoming" alt="avatar"
+                            style="width: 150px; height: 150px; object-fit:cover" />
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-8">
                                 <h5 class="mb-3">Margaret W</h5>

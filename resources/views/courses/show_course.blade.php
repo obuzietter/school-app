@@ -37,7 +37,7 @@
 
 
 
-                        <h5>Learning Schedule</h5>
+                        {{-- <h5>Learning Schedule</h5>
                         @php
                             $schedule = is_string($course->learning_schedule)
                                 ? json_decode($course->learning_schedule, true)
@@ -51,7 +51,7 @@
                             </ul>
                         @else
                             <p>No schedule available.</p>
-                        @endif
+                        @endif --}}
                     </div>
                     <div class="card-footer">
                         <a href="/application-form" class="btn btn-warning">Enroll Now</a>
