@@ -49,7 +49,9 @@ class ApplicationController extends Controller
 
             if (!$application) {
                 Log::error('Application save failed', ['data' => $validated]);
-                return redirect('/application-form')->with('errors', 'Failed to submit your application. Please try again.');
+                return redirect('/application-form')
+                    ->withInput() // ++ Return with input data
+                    ->with('errors', 'Failed to submit your application. Please try again.');
             }
 
             // If referral code is valid, increment the marketer's students referred
@@ -58,18 +60,35 @@ class ApplicationController extends Controller
             }
 
             // Send the email
+            // try {
+            //     Mail::to('obuyacalvince672@gmail.com')->send(new ApplicationMail($validated));
+            // } catch (Exception $e) {
+            //     Log::error('Email sending failed', ['error' => $e->getMessage()]);
+            //     return redirect('/application-form')
+            //         ->withInput()// ++ Return with input data
+            //         ->with('errors', 'Application saved, but email notification failed. Please contact support.');
+            // }
+
             try {
-                Mail::to('obuyacalvince672@gmail.com')->send(new ApplicationMail($validated));
+                Mail::to('obuyacalvince672@gmail.com')
+                    ->cc('ombebavictor22@gmail.com') // Add another recipient as CC
+                    ->bcc('info@palmateacademy.co.ke') // Add another recipient as BCC (hidden from others)
+                    ->send(new ApplicationMail($validated));
             } catch (Exception $e) {
                 Log::error('Email sending failed', ['error' => $e->getMessage()]);
-                return redirect('/application-form')->with('errors', 'Application saved, but email notification failed. Please contact support.');
+                return redirect('/application-form')
+                    ->withInput() // ++ Return with input data
+                    ->with('errors', 'Application saved, but email notification failed. Please contact support.');
             }
+            
 
             return redirect('/application-form')->with('success', 'Your application has been submitted successfully! We will contact you soon.');
         } catch (Exception $e) {
             // Log unexpected errors
             Log::error('Unexpected error in application store', ['error' => $e->getMessage()]);
-            return redirect('/application-form')->with('errors', $e->getMessage());
+            return redirect('/application-form')
+                ->withInput() // ++ Return with all input data
+                ->with('errors', $e->getMessage());
         }
     }
 }
