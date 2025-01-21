@@ -17,9 +17,16 @@
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
 
-        @if (session('error'))
+        {{-- @if (session('error'))
             <div class="alert alert-danger">{{ session('error') }}</div>
+        @endif --}}
+
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {!! session('error') !!} <!-- This will render the <br> line breaks -->
+            </div>
         @endif
+
 
         <!-- Firebase Messages -->
         <div class="firebase-messages mb-4" style="max-height: 50vh; overflow-y: scroll;">
@@ -101,7 +108,7 @@
                             <td>{{ $db_message->transaction_code }}</td>
                             {{-- <td>{{ $db_message->amount }}</td> --}}
                             <td>{{ number_format($db_message->amount, 2) }}</td>
-                            <td>{{ $db_message->description }}</td> 
+                            <td>{{ $db_message->description }}</td>
                             <td>{{ $db_message->date }}</td>
 
                         </tr>
