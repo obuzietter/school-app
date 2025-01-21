@@ -80,7 +80,7 @@ class ApplicationController extends Controller
                     ->withInput() // ++ Return with input data
                     ->with('errors', 'Application saved, but email notification failed. Please contact support.');
             }
-            
+
 
             return redirect('/application-form')->with('success', 'Your application has been submitted successfully! We will contact you soon.');
         } catch (Exception $e) {

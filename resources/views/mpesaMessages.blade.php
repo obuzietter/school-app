@@ -89,8 +89,7 @@
                         <th>#</th>
                         <th>#Voucher</th>
                         <th>Amount</th>
-                        <th>Customer Name</th>
-                        <th>Number</th>
+                        <th>Description</th>
                         <th>Date</th>
 
                     </tr>
@@ -99,13 +98,10 @@
                     @forelse ($db_messages as $db_message)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            {{-- <td>{{ $db_message->address }}</td>
-                            <td>{{ $db_message->body }}</td>
-                            <td>{{ $db_message->date }}</td> --}}
                             <td>{{ $db_message->transaction_code }}</td>
-                            <td>{{ $db_message->amount }}</td>
-                            <td>{{ $db_message->customer_name }}</td>
-                            <td>{{ $db_message->customer_number }}</td>
+                            {{-- <td>{{ $db_message->amount }}</td> --}}
+                            <td>{{ number_format($db_message->amount, 2) }}</td>
+                            <td>{{ $db_message->description }}</td> 
                             <td>{{ $db_message->date }}</td>
 
                         </tr>

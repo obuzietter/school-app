@@ -17,10 +17,9 @@ return new class extends Migration
             $table->text('body');
             $table->string('transaction_code')->unique(); // New field for transaction code
             $table->decimal('amount', 8, 2)->nullable();   // New field for amount (with two decimal places)
-            $table->string('customer_name')->nullable();   // New field for customer name
-            $table->string('customer_number', 15)->nullable(); // New field for customer phone number
+            $table->string('description')->nullable();
             $table->boolean('voucher_status')->default(false);
-            $table->timestamp('date');                     // Existing field for date
+            $table->string('date')->nullable();                     // Existing field for date
             $table->timestamps();
         });
     }

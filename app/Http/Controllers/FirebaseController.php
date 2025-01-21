@@ -98,35 +98,39 @@ class FirebaseController extends Controller
 
     private function storeMessagesInDatabase(array $firebaseData): array
     {
-        // $pattern = '/(?P<transaction_code>[A-Za-z0-9]{10})\s*Confirmed\.?\s*You have received Ksh(?P<amount>\d{1,3}(?:,\d{3})*(?:\.\d{2})?)\s*from\s*(?P<customer_name>[A-Za-z\s]+)\s*(?P<customer_number>\d{10})\s*on\s*(\d{2}\/\d{2}\/\d{2,4})\s*at\s*(\d{1,2}:\d{2}\s[APap][Mm])/';
-        $pattern = '/(?P<transaction_code>[A-Za-z0-9]{10})\s*Confirmed\.?\s*You have received Ksh(?P<amount>\d{1,3}(?:,\d{3})*(?:\.\d{2})?)\s*from\s*(?P<customer_name>[A-Za-z\s]+)\s*(?P<customer_number>\d{10})\s*on\s*(?P<date>\d{1,2}\/\d{1,2}\/\d{2,4})\s*at\s*(?P<time>\d{1,2}:\d{2}\s[APap][Mm])(?:\s.*)?/';
+        // Updated regex pattern to capture transaction code, date, time, amount, and description
+        $pattern = '/(\w{10,})\s*Confirmed\.?\s*on\s*(\d{1,2}\/\d{1,2}\/\d{2,4})\s*at\s*(\d{1,2}:\d{2}\s?[APM]{2})\s*Ksh([\d,\.]+)\s*received\s*from\s*([^\.]+)/';
+        
         $errors = []; // Store errors here
+    
         foreach ($firebaseData as $message) {
             // Attempt to match the message with the regex
             if (preg_match($pattern, $message['body'], $matches)) {
-                // Ensure the amount is in a valid numeric format
-                $amount = str_replace(',', '', $matches['amount']);  // Remove commas
-
+                // Extract the values
+                $transactionCode = $matches[1];
+                $date = $matches[2];
+                $time = $matches[3];
+                $amount = str_replace(',', '', $matches[4]); // Remove commas in amount
+                $description = $matches[5];
+    
                 // Check if the transaction code already exists in the database
-                $existingMessage = MpesaMessage::where('transaction_code', $matches['transaction_code'])->first();
+                $existingMessage = MpesaMessage::where('transaction_code', $transactionCode)->first();
                 Log::info("Existing message", ['message' => $existingMessage]);
-
+    
                 if (!$existingMessage) {
                     // Store the message in the database
-
                     MpesaMessage::updateOrCreate(
                         ['body' => $message['body']], // Use 'body' to prevent duplicates
                         [
-                            'transaction_code' => $matches['transaction_code'],
+                            'transaction_code' => $transactionCode,
                             'amount' => (float) $amount, // Store amount as a float
-                            'customer_name' => $matches['customer_name'],
-                            'customer_number' => $matches['customer_number'],
+                            'description' => $description, // Store description
+                            'date' => Carbon::createFromFormat('d/m/y', $date)->toDateString() . ' ' . $time, // Store date and time
                             'address' => $message['address'],
-                            'date' => Carbon::createFromTimestampMs($message['date'])->toDateTimeString(),
                         ]
                     );
                 } else {
-                    $errors[] = "Duplicate transaction code found, skipping message: {$matches['transaction_code']}";
+                    $errors[] = "Duplicate transaction code found, skipping message: {$transactionCode}";
                 }
             } else {
                 // Log the message if it doesn't match the expected format
@@ -134,9 +138,10 @@ class FirebaseController extends Controller
                 // $errors[] = "Message format doesn't match regex pattern: ". substr($message['body'],0,10);
             }
         }
+        
         return $errors;  // Return the captured errors
     }
-
+    
 
 
     private function fetchDatabaseMessages()
