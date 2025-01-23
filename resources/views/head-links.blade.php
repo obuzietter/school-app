@@ -3,3 +3,5 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/theme.css">
 <link rel="stylesheet" href="/css/header.css">
+{{-- link favicon --}}
+<link rel="icon" href="/images/logo.png" type="image/x-icon">
