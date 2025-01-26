@@ -46,30 +46,37 @@ class MarketerResource extends Resource
                     TextInput::make('referral_code')
                         ->label('Referral Code')
                         ->required()
+                        ->readOnly() // Make the field read-only since it is auto-generated
                         ->unique('marketers', 'referral_code')
                         ->helperText('Click "Generate Link" to auto-generate a unique affiliate link.')
-                        ->suffixAction(
-                            ActionsAction::make('generateLink')
-                                ->label('Generate Link')
-                                ->icon('heroicon-m-globe-alt')
-                                ->action(function (Forms\Set $set) {
-                                    // Generate a unique 5-character referral code
-                                    $code = Str::upper(Str::random(5));
+                        ->suffixActions(
+                            [
+                                ActionsAction::make('generateLink')
+                                    ->label('Generate Link')
+                                    ->icon('heroicon-o-cog')
+                                    ->action(function (Forms\Set $set) {
+                                        // Generate a unique 5-character referral code
+                                        $code = Str::upper(Str::random(5));
 
-                                    // Save the referral code to the form
-                                    $set('referral_code', $code);
+                                        // Save the referral code to the form
+                                        $set('referral_code', $code);
 
-                                    // Generate the affiliate link using the base URL
-                                    $baseUrl = url('/application-form'); // Replace '/enroll' with your enrollment page route
-                                    $affiliateLink = $baseUrl . '?referral_code=' . $code;
+                                        // Generate the affiliate link using the base URL
+                                        $baseUrl = url('/application-form'); // Replace '/enroll' with your enrollment page route
+                                        $affiliateLink = $baseUrl . '?referral_code=' . $code;
 
-                                    // Optionally, save the affiliate link in another form field
-                                    $set('affiliate_link', $affiliateLink);
-                                })
+                                        // Optionally, save the affiliate link in another form field
+                                        $set('affiliate_link', $affiliateLink);
+                                    }),
+                               
+                            ]
+
+
                         ),
                     TextInput::make('affiliate_link')
                         ->label('Affiliate Link')
-                        // ->readOnly() // Make the field read-only since it is auto-generated
+                        ->readOnly() // Make the field read-only since it is auto-generated
+                        
                         ->required()
                         ->helperText('This is the affiliate link generated from the referral code.'),
 
@@ -86,9 +93,19 @@ class MarketerResource extends Resource
             ->columns([
                 TextColumn::make('name')->label('Marketer Name')->sortable()->searchable(),
                 TextColumn::make('email')->label('Email')->sortable()->searchable(),
-                TextColumn::make('referral_code')->label('Referral Code'),
+                TextColumn::make('referral_code')
+                    ->label('Referral Code')
+                    ->color('info')
+                    ->copyable()
+                    ->copyMessage('Referral Code Copied!')
+                    ->copyMessageDuration(1500),
                 TextColumn::make('students_referred')->label('Students Referred')->sortable(),
-                TextColumn::make('affiliate_link')->label('Affiliate Link'),
+                TextColumn::make('affiliate_link')
+                    ->label('Affiliate Link')
+                    ->color('info')
+                    ->copyable()
+                    ->copyMessage('Affiliate Link Copied!')
+                    ->copyMessageDuration(1500),
                 TextColumn::make('created_at')->label('Date Created')->dateTime(),
             ])
             ->filters([

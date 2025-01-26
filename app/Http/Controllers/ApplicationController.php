@@ -59,20 +59,10 @@ class ApplicationController extends Controller
                 Marketer::where('referral_code', $validated['referral_code'])->increment('students_referred');
             }
 
-            // Send the email
-            // try {
-            //     Mail::to('obuyacalvince672@gmail.com')->send(new ApplicationMail($validated));
-            // } catch (Exception $e) {
-            //     Log::error('Email sending failed', ['error' => $e->getMessage()]);
-            //     return redirect('/application-form')
-            //         ->withInput()// ++ Return with input data
-            //         ->with('errors', 'Application saved, but email notification failed. Please contact support.');
-            // }
-
             try {
                 Mail::to('obuyacalvince672@gmail.com')
                     ->cc('ombebavictor22@gmail.com') // Add another recipient as CC
-                    ->bcc('info@palmateacademy.co.ke') // Add another recipient as BCC (hidden from others)
+                   ->bcc('info@palmateacademy.co.ke') // Add another recipient as BCC (hidden from others)
                     ->send(new ApplicationMail($validated));
             } catch (Exception $e) {
                 Log::error('Email sending failed', ['error' => $e->getMessage()]);
