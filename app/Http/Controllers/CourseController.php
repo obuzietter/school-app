@@ -15,7 +15,7 @@ class CourseController extends Controller
 
 
         // Pass data to a view
-        return view('home', compact('courses'));
+        return view('/home', compact('courses'));
     }
     public function fetchCoursesAd()
     {

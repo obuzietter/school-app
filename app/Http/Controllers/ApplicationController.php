@@ -34,7 +34,7 @@ class ApplicationController extends Controller
                 'last_name' => 'required|string|max:255',
                 'date_of_birth' => 'required|date',
                 'gender' => 'required|string',
-                'email' => 'required|email|unique:applications,email',
+                'email' => 'required|email',
                 'phone' => 'required|string|max:20',
                 'education' => 'required|string',
                 'course' => 'required|string',
@@ -61,7 +61,7 @@ class ApplicationController extends Controller
 
             try {
                 Mail::to('obuyacalvince672@gmail.com')
-                    ->cc('ombebavictor22@gmail.com') // Add another recipient as CC
+                    ->cc(['ombebavictor22@gmail.com']) // Add another recipient as CC
                    ->bcc('info@palmateacademy.co.ke') // Add another recipient as BCC (hidden from others)
                     ->send(new ApplicationMail($validated));
             } catch (Exception $e) {

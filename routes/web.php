@@ -8,6 +8,8 @@ use App\Mail\ApplicationMail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\FirebaseController;
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\IntasendController;
+use App\Http\Middleware\VerifyCsrfToken;
 use App\Http\Middleware\VerifyPin;
 
 use Illuminate\Support\Facades\Log;
@@ -51,7 +53,13 @@ Route::get('/storage/{path}', function ($path) {
     return response()->file($filePath);
 })->where('path', '.*')->name('storage.file');
 
+//INTASEND ROUTES
+Route::post('/stk-push', [IntasendController::class, 'initiateStkPush'])->name('stkpush');
+//checkPaymentStatus route
+Route::post('/check-payment-status', [IntasendController::class, 'checkPaymentStatus'])->name('checkPaymentStatus');
 
-
+//INTASEND PAYMENT CALLBACK SCRIPT ROUTE
+Route::post('/payment-callback', [IntasendController::class, 'paymentCallback'])
+    ->name('paymentCallback'); 
 
 
