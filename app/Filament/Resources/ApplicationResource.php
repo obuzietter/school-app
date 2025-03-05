@@ -75,22 +75,7 @@ class ApplicationResource extends Resource
                     ])
                     ->required(),
                 
-                // TextInput::make('institution')
-                //     ->label('Institution')
-                //     ->required()
-                //     ->maxLength(255),
-                
-                // Select::make('job_title')
-                //     ->label('Job Title')
-                //     ->options([
-                //         'student' => 'Student',
-                //         'intern' => 'Intern',
-                //         'junior' => 'Junior Position',
-                //         'senior' => 'Senior Position',
-                //         'other' => 'Other',
-                //     ])
-                //     ->required(),
-
+               
                 Select::make('course')
                     ->label('Course')
                     ->options([
@@ -136,6 +121,7 @@ class ApplicationResource extends Resource
                 TextColumn::make('last_name')->label('Last Name')->searchable(),
                 TextColumn::make('email')->label('Email')->searchable(),
                 TextColumn::make('phone')->label('Phone'),
+                TextColumn::make('referral_code')->label('Referral')->sortable(),
                 TextColumn::make('created_at')
                     ->label('Submitted On')
                     ->dateTime('F j, Y, g:i a')
@@ -146,7 +132,6 @@ class ApplicationResource extends Resource
                 // TextColumn::make('institution')->label('Institution'),
                 // TextColumn::make('job_title')->label('Job Title'),
                 TextColumn::make('course')->label('Course'),
-                TextColumn::make('referral_code')->label('Referral'),
 
                 TextColumn::make('preferred_intake')->label('Preferred Intake'),
                 
